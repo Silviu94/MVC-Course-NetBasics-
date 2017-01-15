@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,10 +16,14 @@ namespace ProjectManagement.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-            ViewBag.Author = "Silviu";
-
-            return View();
+            //ViewBag.Message = "Your application description page.";
+            //ViewBag.Author = "Silviu";
+            AboutModel model = new AboutModel
+            {
+                Message = "Your application description page.",
+                Author = "Silviu"
+            };
+            return View(model);
         }
 
         public ActionResult Contact()
