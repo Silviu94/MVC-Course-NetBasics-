@@ -21,9 +21,11 @@ namespace ProjectManagement.Controllers
         }
         public ActionResult HelloUser(string name )
         {
-            return Content("Hello: " + name);
+            string econdedName = Server.HtmlEncode(name);
+            //return Content("Hello: "+name);
+            return Content("Hello: ", econdedName);
         }
 
 
-        }
+    }
     }
