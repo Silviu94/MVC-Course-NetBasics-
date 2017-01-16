@@ -12,17 +12,17 @@ namespace ProjectManagement
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute(
-                name:"Project",
-                url:"Project/Doanaction",
-                defaults:new{ controller = "Project",action = "Doanaction",name = UrlParameter.Optional}
-                );
-
             //routes.MapRoute(
-            //    name: "Default",
-            //    url: "{controller}/{action}/{id}",
-            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            //);
+            //    name:"Project",
+            //    url:"Project/Doanaction",
+            //    defaults:new{ controller = "Project",action = "Doanaction",name = UrlParameter.Optional}
+            //    );
+
+            routes.MapRoute(
+                name: "default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "home", action = "index", id = UrlParameter.Optional }
+            );
 
         }
     }
