@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace ProjectManagement.Controllers
 {
+    
     public class ProjectController : Controller
     {
         public ActionResult Doanaction()
@@ -14,6 +15,11 @@ namespace ProjectManagement.Controllers
 
 
         }
+        public int Search(int alpha)
+        {
+            return alpha;
+        }
+
 
         }
     }

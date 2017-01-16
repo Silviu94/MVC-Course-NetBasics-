@@ -46,5 +46,6 @@ namespace ProjectManagement.Controllers
             return sum / list.Count;
 
         }
+      
     }
 }
